@@ -1,5 +1,7 @@
 # ActiveRecordUUID
 
+[![Gem Version](https://badge.fury.io/rb/activerecord_uuid.png)](https://rubygems.org/gems/activerecord_uuid)
+
 UUID extension for ActiveRecord
 
 ## Installation
