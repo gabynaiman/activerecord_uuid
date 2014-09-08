@@ -1,6 +1,7 @@
 # ActiveRecordUUID
 
 [![Gem Version](https://badge.fury.io/rb/activerecord_uuid.png)](https://rubygems.org/gems/activerecord_uuid)
+[![Build Status](https://travis-ci.org/gabynaiman/activerecord_uuid.png?branch=master)](https://travis-ci.org/gabynaiman/activerecord_uuid)
 
 UUID extension for ActiveRecord
 
