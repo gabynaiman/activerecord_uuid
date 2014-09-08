@@ -19,6 +19,10 @@ Gem::Specification.new do |s|
   s.add_dependency 'activerecord', '~> 3'
   s.add_dependency 'uuidtools'
 
-  s.add_development_dependency 'sqlite3'
-  s.add_development_dependency 'rspec', '~> 2.12.0'
+  if RUBY_ENGINE == 'jruby'
+    s.add_development_dependency 'activerecord-jdbcsqlite3-adapter'
+  else
+    s.add_development_dependency 'sqlite3'
+  end
+  s.add_development_dependency 'rspec', '~> 2.14.0'
 end

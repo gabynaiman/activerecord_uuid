@@ -3,7 +3,7 @@ require 'spec_helper'
 describe 'ActiveRecord extension' do
 
   before :all do
-    ActiveRecord::Base.establish_connection adapter: 'sqlite3', database: ":memory:"
+    ActiveRecord::Base.establish_connection adapter: SQLITE_ADAPTER, database: ":memory:"
     ActiveRecord::Base.connection
     ActiveRecord::Migrator.migrate ActiveRecord::Migrator.migrations_path
   end
@@ -15,7 +15,7 @@ describe 'ActiveRecord extension' do
       uuid_column = Country.columns_hash['key']
       uuid_column.type.should eq :string
       uuid_column.limit.should eq 36
-      uuid_column.null.should be_true
+      uuid_column.null.should be true
     end
 
     it 'ActiveRecord generation' do
@@ -33,8 +33,8 @@ describe 'ActiveRecord extension' do
       uuid_column = Language.columns_hash['id']
       uuid_column.type.should eq :string
       uuid_column.limit.should eq 36
-      uuid_column.primary.should be_true
-      uuid_column.null.should be_false
+      uuid_column.primary.should be true
+      uuid_column.null.should be false
     end
 
     it 'ActiveRecord generation' do
